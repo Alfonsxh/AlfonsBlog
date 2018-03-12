@@ -1,1 +1,3 @@
 # AlfonsBlog
+
+used Django
