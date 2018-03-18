@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 
+from accounts import views as accounts_views
 from boards import views
 
 urlpatterns = [
     url(r'^$', views.home, name="home"),
     # path('', views.home, name="home"),
+    url(r'^signup/$', accounts_views.signup, name='signup'),
+    url(r'^boards/(?P<pk>\d+)/$', views.board_topics, name="board_topics"),
     path('admin/', admin.site.urls),
 ]
