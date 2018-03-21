@@ -40,8 +40,8 @@ INSTALLED_APPS = [
 
     'widget_tweaks',
 
-    'boards',   # 板块
-    'accounts',
+    'boards',       # 板块
+    'accounts',     # 账户
 ]
 
 MIDDLEWARE = [
