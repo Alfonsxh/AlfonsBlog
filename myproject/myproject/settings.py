@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'widget_tweaks',
+    # 'boards.templatetags.form_tags',
 
     'boards',       # 板块
     'accounts',     # 账户
@@ -133,3 +134,7 @@ STATICFILES_DIRS = [
 LOGOUT_REDIRECT_URL = 'home'
 
 LOGIN_REDIRECT_URL = 'home'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+LOGIN_URL = 'login'

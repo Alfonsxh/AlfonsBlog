@@ -1,9 +1,18 @@
+#!/usr/bin/env python
+# encoding: utf-8
+"""
+@author: Alfons
+@contact: alfons_xh@163.com
+@file: test_views.py
+@time: 18-3-25 上午11:39
+@version: v1.0
+"""
 from django.urls import reverse, resolve
 from django.test import TestCase
 from django.contrib.auth.models import User
-from .views import home, board_topics, new_topic
-from .models import Board, Topic, Post
-from .forms import NewTopicForm
+from ..views import home, board_topics, new_topic
+from ..models import Board, Topic, Post
+from ..forms import NewTopicForm
 
 
 class HomeTests(TestCase):
