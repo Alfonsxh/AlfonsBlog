@@ -19,12 +19,7 @@ class NewTopicsTests(TestCase):
     def setUp(self):
         Board.objects.create(name='Django', description='Django board.')
         User.objects.create_user(username='xiaohui2', email='xiaohuihui100@gmail.com', password='abcdef12345678')  # <- included this line here
-        url = reverse('login')
-        data = {
-            "username": "xiaohui2",
-            "password": "abcdef12345678"
-        }
-        self.client.post(url, data)
+        self.client.login(username="xiaohui2", password="abcdef12345678")
 
     def test_board_topics_view_success_status_code(self):
         url = reverse('new_topic', kwargs={'pk': '1'})
